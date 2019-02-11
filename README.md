@@ -69,3 +69,29 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## Storybook
+
+Add @storybook/react
+
+**Note: npm package**
+
+### `npm i --save-dev @storybook/react`
+### `npm i --save react react-dom`
+### `npm i --save-dev @babel/core@8.0.4`
+### `npm i --save-dev babel-loader`
+
+**Note: yarn package**
+
+### `yarn add @storybook/react --dev`
+### `yarn add @babel/core --dev`
+### `yarn add babel-loader --dev`
+
+## Learn More
+
+You can learn more in the [Storybook for React](https://storybook.js.org/basics/guide-react/).
+
+**Note: start storybook**
+
+### `npm run start`
+### `yarn storybook`
