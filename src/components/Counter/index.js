@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { ButtonStyled } from "../../styles";
 
 const initialCount = 0;
 
@@ -17,10 +18,8 @@ export const decreaseCount = setter => () => {
 function CounterHook() {
   const [count, setCount] = useCount(initialCount);
   useEffect(() => {
-    // componentDidMount
     console.log("--> componentDidMount");
     return () => {
-      // component unmount
       console.log("component unmount");
     };
   }, [count]); // useEffect((), []) --> componentDidUpdate
@@ -28,9 +27,11 @@ function CounterHook() {
   return (
     <div>
       <span>Count: {count}</span>
-      <button onClick={() => setCount(0)}>Reset</button>
-      <button onClick={increaseCount(setCount)}>+</button>
-      <button onClick={decreaseCount(setCount)}>-</button>
+      <ButtonStyled onClick={() => setCount(0)}>Reset</ButtonStyled>
+      <ButtonStyled primary onClick={increaseCount(setCount)}>
+        +
+      </ButtonStyled>
+      <ButtonStyled onClick={decreaseCount(setCount)}>-</ButtonStyled>
     </div>
   );
 }

@@ -1,11 +1,12 @@
 import React from "react";
+import { ButtonStyled } from "../../styles";
 
 function Button() {
   return (
     <div>
-      <button onClick={() => alert("Click my Button")}>
+      <ButtonStyled primary onClick={() => alert("Hello React Hooks")}>
         Click me to please!
-      </button>
+      </ButtonStyled>
     </div>
   );
 }
